@@ -54,6 +54,7 @@ public class TestAll extends TestCase {
         suite.addTest(TestTransformedList.suite());
         suite.addTest(TestTypedList.suite());
         suite.addTest(TestUnmodifiableList.suite());
+        suite.addTest(TestCollections701.suite());
         
         return suite;
     }
