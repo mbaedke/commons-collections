@@ -378,8 +378,9 @@
   </dependencies>
 
   <properties>
-    <maven.compile.source>1.2</maven.compile.source>
-    <maven.compile.target>1.2</maven.compile.target>
+<!--    <maven.compiler.source>1.7</maven.compiler.source>-->
+<!--    <maven.compiler.target>1.7</maven.compiler.target>-->
+<!--    <commons.compiler.version>3.13.0</commons.compiler.version>-->
     <commons.componentid>collections</commons.componentid>
     <commons.release.version>3.2.2</commons.release.version>
     <commons.rc.version>RC3</commons.rc.version>
@@ -399,6 +400,26 @@
             <includes>
               <include>org/apache/commons/collections/TestAllPackages.java</include>
             </includes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-toolchains-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>toolchain</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <toolchains>
+            <jdk>
+              <version>1.7</version>
+              <vendor>oracle</vendor>
+            </jdk>
+          </toolchains>
         </configuration>
       </plugin>
       <plugin>
